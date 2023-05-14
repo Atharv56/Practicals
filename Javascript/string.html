@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="./index.js"></script>
+  <title>Static Template</title>
+</head>
+<body>
+  <h1>String Match</h1>
+  <form id="myForm">
+    Input <input type="text" id="in" value="ababababcd" /> <br />
+    Enter string to search <input type="text" id="pattern" value="ab"/> <br />
+    No of occurrences: <input type="text" id="occurrences" /> <br />
+    Replace string with <input type="text" id="replace" value="op" /> <br />
+    New string <input type="text" id="answer" /> <br />
+    <button type="submit" id="submit">Click to see magic</button>
+  </form>
+  <script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", (event) => {
+      // Prevent default form submission behavior
+
+      const input = document.getElementById("in").value;
+      console.log(input)
+      const pattern = document.getElementById("pattern").value;
+      const occurrences = document.getElementById("occurrences");
+      const replaceString = document.getElementById("replace").value;
+      const answer = document.getElementById("answer");
+
+      const num = input.split(pattern).length - 1;
+      occurrences.value = num;
+
+      const result = input.replaceAll(pattern, replaceString);
+      answer.value = result;
+      event.preventDefault(); //prevents page reload
+    });
+    
+  </script>
+</body>
+</html>

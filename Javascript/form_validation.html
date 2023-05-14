@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Validation Example</h1>
+
+  <form id="myForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <span class="error" id="nameError"></span>
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="emailError"></span>
+    </div>
+
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <span class="error" id="passwordError"></span>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+      
+      // Clear previous error messages
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+
+      // Perform validation
+      var nameInput = document.getElementById("name");
+      var emailInput = document.getElementById("email");
+      var passwordInput = document.getElementById("password");
+
+      if (nameInput.value.trim() === "") {
+        document.getElementById("nameError").textContent = "Name is required";
+        // nameInput.focus();
+        return false;
+      }
+
+      if (emailInput.value.trim() === "") {
+        document.getElementById("emailError").textContent = "Email is required";
+        // emailInput.focus();
+        return false;
+      }
+
+      if (passwordInput.value.trim() === "") {
+        document.getElementById("passwordError").textContent = "Password is required";
+        // passwordInput.focus();
+        return false;
+      }
+
+      // If validation passes, you can proceed with form submission
+      alert("Form submitted successfully!");
+    });
+  </script>
+</body>
+</html>

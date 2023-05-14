@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<script>
+function sort() {
+const arr = document.getElementById("in").value;
+console.log(arr);
+const a = arr.split(" ");
+console.log(a);
+const nums = a.map((str) => {
+return Number(str);
+});
+console.log(nums);
+console.log(nums.sort());
+var g = document.getElementById("out");
+g.value = nums.sort();
+}
+</script>
+<title>Static Template</title>
+</head>
+<body>
+Enter the array <input type="text" id="in" />
+<input type="text" id="out" />
+<button onclick="sort()">Sort</button>
+</body>
+</html>

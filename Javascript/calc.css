@@ -1,0 +1,97 @@
+.container {
+    border: 1px solid #cccccc;
+    background: white;
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px;
+    }
+    .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    margin: auto;
+    }
+    .button {
+    height: 60px;
+    padding: 3px;
+    font-weight: bolder;
+    border-radius: 50%;
+    background-color: cadetblue;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgba(0, 0, 0, 0.04)
+    );
+    text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+    }
+    .button:hover {
+    background-color: rgb(163, 235, 238);
+    }
+    .operator {
+    color: black;
+    background-color: rgb(62, 62, 201);
+    border: none;
+    font-size: 2rem;
+    border-radius: 25px;
+    }
+    .operator:hover {
+    background-color: rgb(139, 228, 231);
+    }
+    .clear {
+    background-color: white;
+    border-color: orange;
+    color: black;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    margin-left: 135px;
+    margin-bottom: 12px;
+    /* border: none; */
+    border-radius: 30px;
+    }
+    .clear:hover {
+    background-color: orange;
+    }
+    .equal-sign {
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    }
+    .equal-sign:hover {
+    background-color: #4e9ed4;
+    }
+    .screen {
+    background-color: rgb(171, 219, 231);
+    justify-content: left;
+    color: black;
+    font-size: large;
+    width: 113%;
+    height: 100px;
+    cursor: default;
+    padding: 10px;
+    padding-left: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 15px;
+    }
+    .c-button {
+    background-color: orange;
+    border-radius: 30px;
+    color: white;
+    }
+    .c-button:hover {
+    background-color: orange;
+    }

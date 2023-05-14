@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="./index.js"></script>
+  <title>Static Template</title>
+</head>
+<body>
+    Enter the array <input type="text" id="in" />
+    <input type="text" id="out" />
+    <!-- <button onclick="sort()">Sort</button> -->
+    <button onclick="even()">Even no</button>
+    <button onclick="odd()">Odd no</button>
+</body>
+</html>
+<script>
+
+const odd = () => {
+const arr = document.getElementById("in").value;
+console.log(arr);
+const a = arr.split(" ");
+console.log(a);
+const nums = a.map((num) => {
+return Number(num);
+});
+console.log(nums);
+const n = nums.filter((num) => {
+return num % 2 != 0;
+});
+const output = document.getElementById("out");
+output.value = n;
+};
+
+const even = () => {
+const arr = document.getElementById("in").value;
+console.log(arr);
+const a = arr.split(" ");
+console.log(a);
+const nums = a.map((str) => {
+return Number(str);
+});
+console.log(nums);
+const n = nums.filter((num) => {
+return num % 2 == 0;
+});
+const output = document.getElementById("out");
+output.value = n;
+};
+
+</script>
+</body>
+</html>
