@@ -28,7 +28,6 @@ int MandM(int n, int i, int j)
 int main()
 {
     int i, j, m, n, q[100][100], k[100];
-    printf("Yash Thakar : 60009210205\n");
     printf("Enter the number of sequences\n");
     scanf("%d", &n);
     printf("Enter the sequence\n");
